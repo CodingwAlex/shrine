@@ -22,10 +22,12 @@ html {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.87);
     position: fixed;
+    z-index: +9;
+    top: 0%;
 }
 
 .lefthead {
-    flex: 1;
+    width: 16em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,37 +35,164 @@ html {
 }
 
 .logo {
-    flex: 2;
+    text-align: center;
+}
+
+.logo a {
+    flex: auto;
     color: white;
     text-transform: uppercase;
     font-size: 1.2em;
     width: 5.2em;
     letter-spacing: 0.1em;
     font-family: "melancholy";
-    text-align: center;
     font-weight: bold;
+    text-decoration: none;
 }
 
-#logopic {
-    flex: 1;
-    width: 20px;
-    height: auto;
-    margin: 8px;
+.logoimagecontainer {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    margin-left: 50px;
+}
+
+.logoimagecontainer img {
+    width: 60px;
 }
 
 .righthead {
-    flex: 1;
+    position: relative;
+    color: white;
+    width: 27em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    width: 5.2em;
-    letter-spacing: 0.1em;
-    font-family: "melancholy";
+    margin-right: 2.5vw;
+}
+
+.righthead a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color:rgb(221, 221, 221);
+    font-family: "izayoi";
+    position: relative;
+    padding: 0 6px;
+}
+
+.righthead a:hover {
+    color: lightblue;
+}
+
+.righthead img {
+    width: 40px;
+    height: auto;
+}
+
+.top {
+    position: relative;
+}
+
+.topcontent {
+    position: absolute;
+    top: 250px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: rgb(0, 0, 0, 0.87);
+    padding: 7px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-weight: bold;
+}
+
+
+.welcome {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+}
+
+.welcome h1 {
+    color: white;
+    text-shadow: 0 0 0.8em rgb(255, 255, 255);
+}
+
+.welcome p {
+    color: white;
+    font-size: large;
+}
+
+#pic1 {
+    flex: 1;
+    align-content: center;
+    width: 50vw;
+}
+
+#pic1 img{
+    width: 35vw;
+    height: auto;
+}
+
+.middle {
+    width: 100%;
+    background-color: rgb(189, 50, 50);
+    height: 350px;
+    position: fixed;
+    margin-top: 080px;
+    z-index: -1;
+}
+
+.middlecontent {
+    margin: auto;
+    width: 85vw;
+    height: 85vw;
+}
+
+.middleh1 {
+    text-align: center;
+    color: white;
+}
+
+.middlemain {
+    display: flex;
+}
+
+.rias, .akeno, .koneko, .asia,
+.xenovia, .irina, .rossweisse {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rias img, .akeno img, .koneko img, .asia img,
+.xenovia img, .irina img, .rossweisse img {
+    width: 10em;
+    height: 12em;
+    object-fit: cover;
+    border: 0.3em solid rgb(255, 255, 255);
+    border-radius: 1.5em;
+    box-shadow: 0 10px 30px black;
+    transition: 0.3s;
+    margin: -0.5em -1em -1em -1em;
+}
+
+.rias img:hover, .akeno img:hover, .koneko img:hover,
+.asia img:hover, .xenovia img:hover, 
+.irina img:hover, .rossweisse img:hover {
+    box-shadow: 0 10px 30px aqua;
+    transform: scale(1.05);
+}
+
+.rias p, .akeno p, .koneko p, .asia p,
+.xenovia p, .irina p, .rossweisse p {
+    color: aliceblue;
+    font-size: large;
 }
