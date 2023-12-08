@@ -24,6 +24,7 @@ html {
     position: fixed;
     z-index: +9;
     top: 0%;
+    left: 0%;
 }
 
 .lefthead {
@@ -97,14 +98,17 @@ html {
 .topcontent {
     position: absolute;
     top: 250px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background: rgb(0, 0, 0, 0.87);
+    left: 10%;
+    right: 10%;
+    margin-bottom: 300px;
+    background-color: rgb(0, 0, 0, 0.87);
     padding: 7px;
     border-radius: 1em;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2em rgb(69, 69, 69);
 }
 
 
@@ -138,11 +142,14 @@ html {
 }
 
 .middle {
+    padding: 20px;
+    left: 0%;
+    right: 0%;
     width: 100%;
     background-color: rgb(189, 50, 50);
-    height: 350px;
-    position: fixed;
-    margin-top: 080px;
+    height: 36%;
+    position: absolute;
+    top: 100%;
     z-index: -1;
 }
 
@@ -195,4 +202,103 @@ html {
 .xenovia p, .irina p, .rossweisse p {
     color: aliceblue;
     font-size: large;
+}
+
+.bottom {
+    position: relative;
+}
+
+.bottombox {
+    position: absolute;
+    top: 85em;
+    left: 10%;
+    right: 10%;
+    padding: 7px;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.bottomwriting {
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 0.8em #ffffff;
+}
+
+.bottomwriting p {
+    font-family: cursive;
+}
+
+.footer {
+    padding: 20px;
+    display: block;
+    margin: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 250%;
+    z-index: -1;
+    background-color: rgb(189, 50, 50);
+}
+
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    width: 60%;
+    height: 60%;
+    background-color: rgb(35, 35, 150);
+    position: absolute;
+    margin: auto;
+    color: aliceblue;
+    font-size: small;
+    text-align: center;
+    padding: 7px;
+    border-radius: 1em;
+}
+
+.footer1writing {
+    flex: 2;
+    font-size: large;
+}
+
+.footer1button {
+    flex: 1;
+    text-align: center;
+}
+
+.footer1button a {
+    text-decoration: none;
+}
+
+#contactbutton {
+    margin: auto;
+    color: white;
+    border: 0.1em solid rgb(255, 255, 255);
+    border-radius: 0.5em;
+    transition: 0.3s;
+    background-color: royalblue;
+}
+
+#contactbutton:hover {
+    box-shadow: 0 5px 10px aqua;
+    transform: scale(1.05);
+}
+
+.footer2 {
+    top: 90%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    height: 10%;
+    color: aliceblue;
+    font-size: small;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
 }
