@@ -1,6 +1,7 @@
 html {
     width: 100%;
     margin: 0;
+    min-height: 100%;
 }
 
 .background {
@@ -91,6 +92,24 @@ html {
     height: auto;
 }
 
+.righthead:after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 217, 255), rgb(0, 4, 255));
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+
+}
+
+.stomach {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .top {
     position: relative;
 }
@@ -141,16 +160,23 @@ html {
     height: auto;
 }
 
+.movecontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .middle {
+    position: absolute;
+    flex: auto;
     padding: 20px;
     left: 0%;
     right: 0%;
     width: 100%;
     background-color: rgb(189, 50, 50);
-    height: 36%;
-    position: absolute;
+    height: 20em;
     top: 100%;
-    z-index: -1;
 }
 
 .middlecontent {
@@ -166,6 +192,11 @@ html {
 
 .middlemain {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(189, 50, 50);
 }
 
 .rias, .akeno, .koneko, .asia,
@@ -189,6 +220,7 @@ html {
     box-shadow: 0 10px 30px black;
     transition: 0.3s;
     margin: -0.5em -1em -1em -1em;
+    z-index: 1;
 }
 
 .rias img:hover, .akeno img:hover, .koneko img:hover,
@@ -205,12 +237,13 @@ html {
 }
 
 .bottom {
-    position: relative;
+    flex: auto;
 }
 
 .bottombox {
     position: absolute;
-    top: 85em;
+    background-color: transparent;
+    margin-top: 85em;
     left: 10%;
     right: 10%;
     padding: 7px;
@@ -224,11 +257,17 @@ html {
     text-shadow: 0 0 0.8em #ffffff;
 }
 
+.bottomwriting h3 {
+    font-style: italic;
+}
+
 .bottomwriting p {
     font-family: cursive;
 }
 
 .footer {
+    position: absolute;
+    flex: auto;
     padding: 20px;
     display: block;
     margin: 0%;
@@ -236,7 +275,6 @@ html {
     right: 0%;
     width: 100%;
     height: 40%;
-    position: absolute;
     top: 250%;
     z-index: -1;
     background-color: rgb(189, 50, 50);
@@ -301,4 +339,74 @@ html {
     font-size: small;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .topcontent {
+        flex-direction: column;
+    }
+    .welcome {
+        margin: 4em auto 0 auto;
+        width: 65vw;
+    }
+    #pic1 {
+        margin-top: 4em;
+    }
+    #pic1 img {
+        width: 60vw;
+    }   
+    .middle {
+        top: 130%;
+        height: 25em;
+    }
+}
+
+@media (max-width: 1300px) {
+    .footer {
+        height: 35em;
+    }
+    .footer1 {
+        flex-direction: column;
+        height: 30em;
+    }
+    .footer1writing {
+        text-align: center;
+    }
+    .footer1button {
+        margin: 1em auto 0 auto;
+    }
+    .footer1writing {
+        align-items: center;
+        padding: 0;
+        margin: 0 1em;
+    }
+    .footer1writing {
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        height: 55em;
+    }
+    .footer1 {
+        height: 50em;
+    }
+    .rightBarStuff {
+        display: none;
+    }
+    .menuHamburger {
+        display: flex;
+    }
+    .headerbar {
+        width: 100vw;
+    }
+    .righthead {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 7vw;
+    }
+    #pic1 img{
+        width: 70vw;
+    }
 }
